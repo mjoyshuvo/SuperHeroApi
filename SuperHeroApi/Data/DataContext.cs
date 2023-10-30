@@ -12,7 +12,8 @@ public class DataContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseSqlServer("Server=localhost,3306;Database=superherodb;User Id=root;Password=1q2w3e4r5t6y;");
+
+        optionsBuilder.UseSqlServer("Server=localhost,1433;Database=superherodb;UID=SA;PWD=cefAl01q2w3e;Encrypt=False");
     }
 
     public DbSet<SuperHero> SuperHeroes { get; set; }
